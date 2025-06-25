@@ -47,30 +47,25 @@ Editar
    ```bash
    git clone https://github.com/tu_usuario/alura-store.git
    cd alura-store
+   
 2. **(Opcional) Crea un entorno virtual:**
 
-bash
-Copiar
-Editar
-python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # En Windows: venv\Scripts\activate
+
 3. **Instala las dependencias:**
 
-bash
-Copiar
-Editar
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
+
 4. **Abre el notebook:**
 
-bash
-Copiar
-Editar
-jupyter notebook notebooks/[nombre_del_notebook].ipynb
-¡Gracias por visitar este proyecto! Siéntete libre de explorar el código, usarlo como referencia o sugerir mejoras. 🙌
+   ```bash
+   jupyter notebook notebooks/AluraStoreLatam.ipynb
+   ¡Gracias por visitar este proyecto! Siéntete libre de explorar el código, usarlo como referencia o sugerir mejoras. 🙌
 
-yaml
-Copiar
-Editar
+```yaml
 
 ---
 
