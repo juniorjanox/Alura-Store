@@ -20,12 +20,12 @@ Alura-Store/
 │   ├── tienda_3.csv
 │   └── tienda_4.csv
 ├── AluraStoreLatam.ipynb 
-└── README.md                   <- Este archivo
+└── README.md                  
 ```
 
 - **`base-de-datos-challenge1-latam/`**: Esta carpeta contiene los archivos CSV originales con los datos de ventas de cada una de las cuatro tiendas de Alura Store (`tienda_1.csv` a `tienda_4.csv`). Estos datos son la fuente principal para el análisis.
     
-- **`Alura_Store_Analysis.ipynb`**: Este es el notebook principal (archivo de Google Colab o Jupyter) donde se realiza todo el análisis de datos. Contiene el código para cargar, limpiar, procesar y visualizar los datos, así como las conclusiones y recomendaciones.
+- **`AluraStoreLatam.ipynb`**: Este es el notebook principal (archivo de Google Colab o Jupyter) donde se realiza todo el análisis de datos. Contiene el código para cargar, limpiar, procesar y visualizar los datos, así como las conclusiones y recomendaciones.
     
 - **`README.md`**: Este archivo, que estás leyendo ahora mismo, proporciona una descripción general del proyecto.
     
@@ -40,17 +40,16 @@ El análisis del notebook genera diversas visualizaciones y métricas clave para
 
 Se compara el **Ingreso Total** y el **Número de Transacciones** de cada tienda.
 
-**Insight:** Las tiendas 2 y 4 muestran consistentemente un volumen de ventas e ingresos significativamente menores en comparación con las tiendas 1 y 3. La **Tienda 4** es la que presenta los ingresos totales y el número de transacciones más bajos.
-
-_(Aquí deberías insertar las imágenes de tus gráficos, por ejemplo, arrastrándolas y soltándolas en el editor de Markdown o usando una URL si las subes a otro lugar.)_
+**Insight:** La **Tienda 4** es la que presenta los ingresos totales y el número de transacciones más bajos.
 
 ```
-![Gráfico de Ingreso Total por Tienda](placeholder_ingreso_total.png)
+![Gráfico de Ingreso Total por Tienda](images/ingreso_total_por_tienda.png)
 ```
 
 ```
 ![Gráfico de Número de Transacciones por Tienda](placeholder_transacciones.png)
 ```
+![image](https://github.com/user-attachments/assets/9b7102b1-a7de-46f5-b2a8-3fe0f0489db8)
 
 ### 2. Calificación Promedio de la Tienda
 
