@@ -114,23 +114,22 @@ Se identifica qué productos tienen mayor y menor demanda en cada ubicación.
 
 ***Gráfico de datos geográficos por tienda***
 ![Gráfico de datos geográficos por tienda](images/vista_ubicacion_tienda_detalles.png)
+
 ---
 
 ## 🚀 Instrucciones para Ejecutar el Notebook
 
 Para ejecutar este análisis en tu entorno de Google Colab, sigue estos pasos:
 
-1. **Abre el Notebook:** Ve a Google Colab y abre el archivo `Alura_Store_Analysis.ipynb` (o el nombre que le hayas dado) desde tu repositorio de GitHub. Puedes ir a `File > Open notebook > GitHub` y pegar la URL de tu repositorio.
+1. **Abre el Notebook:** Ve a Google Colab y abre el archivo `AluraStoreLatam.ipynb` (o el nombre que le hayas dado) desde tu repositorio de GitHub. Puedes ir a `File > Open notebook > GitHub` y pegar la URL de tu repositorio.
     
-2. **Verifica las Librerías:** Asegúrate de que las librerías necesarias estén instaladas. El notebook utiliza `pandas`, `numpy`, `matplotlib` y `seaborn`. En Google Colab, estas librerías ya vienen preinstaladas en la mayoría de los casos. Si alguna no lo está, puedes instalarla con `!pip install <nombre_libreria>`.
+2. **Verifica las Librerías:** Asegúrate de que las librerías necesarias estén instaladas. El notebook utiliza `pandas`, `numpy`, `matplotlib`, `folium` y `seaborn`. En Google Colab, estas librerías ya vienen preinstaladas en la mayoría de los casos. Si alguna no lo está, puedes instalarla con `!pip install <nombre_libreria>`.
     
 3. **Ejecuta las Celdas:** Ejecuta cada celda del notebook secuencialmente.
     
-    - La primera celda cargará los datos de las URLs.
+    - La primera celda cargará los datos de las URLs, y realizará la limpieza y preparación de los datos para cada tienda..
         
-    - La siguiente sección realizará la limpieza y preparación de los datos para cada tienda.
-        
-    - Las secciones posteriores generarán los análisis y gráficos correspondientes a cada punto (Facturación, Categorías, Calificación, Productos, Envío).
+    - Las secciones posteriores generarán los análisis y gráficos correspondientes a cada punto (Facturación, Categorías, Calificación, Productos, Envío, Extra).
         
 4. **Revisa la Salida:** Observa las tablas de resultados impresas y los gráficos generados después de ejecutar cada sección. Estos te proporcionarán los _insights_ clave para el desafío.
     
