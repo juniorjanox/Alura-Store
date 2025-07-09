@@ -45,7 +45,7 @@ Se compara el **Ingreso Total** y el **Número de Transacciones** de cada tienda
 ```
 ![Gráfico de Ingreso Total por Tienda](images/ingreso_total_por_tienda.png)
 ```
-
+![Gráfico de Ingreso Total por Tienda](images/ingreso_total_por_tienda.png)
 ```
 ![Gráfico de Número de Transacciones por Tienda](placeholder_transacciones.png)
 ```
