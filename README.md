@@ -42,14 +42,12 @@ Se compara el **Ingreso Total** y el **Número de Transacciones** de cada tienda
 
 **Insight:** La **Tienda 4** es la que presenta los ingresos totales y el número de transacciones más bajos.
 
-```
+***Gráfico de Ingreso Total por Tienda***
 ![Gráfico de Ingreso Total por Tienda](images/ingreso_total_por_tienda.png)
-```
-![Gráfico de Ingreso Total por Tienda](images/ingreso_total_por_tienda.png)
-```
-![Gráfico de Número de Transacciones por Tienda](placeholder_transacciones.png)
-```
-![image](https://github.com/user-attachments/assets/9b7102b1-a7de-46f5-b2a8-3fe0f0489db8)
+
+***Gráfico de Número de Transacciones por Tienda***
+![Gráfico de Número de Transacciones por Tienda](images/transacciones_por_tienda.png)
+
 
 ### 2. Calificación Promedio de la Tienda
 
@@ -57,9 +55,9 @@ Se evalúa la **satisfacción del cliente** a través de la calificación promed
 
 **Insight:** La **Tienda 1** registra la calificación promedio más baja, lo que sugiere posibles problemas con la calidad del producto o el servicio al cliente, a pesar de tener un alto volumen de ventas.
 
-```
-![Gráfico de Calificación Promedio por Tienda](placeholder_calificacion.png)
-```
+***Gráfico de Calificación Promedio por Tienda***
+![Gráfico de Calificación Promedio por Tienda](images/calificacion_por_tienda.png)
+
 
 ### 3. Costo de Envío Promedio
 
@@ -67,9 +65,9 @@ Se analiza la eficiencia logística comparando el costo promedio de envío por t
 
 **Insight:** La **Tienda 1** tiene el costo de envío promedio más alto, lo que indica ineficiencias logísticas o un área de servicio más costosa. Sorprendentemente, la **Tienda 4**, a pesar de sus bajos ingresos, es la más eficiente en términos de costo de envío promedio.
 
-```
-![Gráfico de Costo de Envío Promedio por Tienda](placeholder_costo_envio.png)
-```
+***Gráfico de Costo de Envío Promedio por Tienda***
+![Gráfico de Costo de Envío Promedio por Tienda](images/costo_envio_por_tienda.png)
+
 
 ### 4. Productos Más y Menos Vendidos (por Tienda)
 
@@ -77,10 +75,45 @@ Se identifica qué productos tienen mayor y menor demanda en cada ubicación.
 
 **Insight:** Este análisis revela si las tiendas están optimizando su inventario y si los productos ofrecidos se alinean con la demanda local. Por ejemplo, una tienda ineficiente podría tener sus productos "estrella" con bajas ventas, o una gran cantidad de stock de productos "menos vendidos".
 
-```
-![Gráfico de Top 5 Productos Más Vendidos para Tienda X](placeholder_top_productos.png)
-```
+***Gráfico de Top 5 Productos Más Vendidos para Tienda 1***
+![Gráfico de Top 5 Productos Más Vendidos para Tienda X](images/top_productos.png)
 
+### 5. ¡Extra! Análisis del desempeño geográfico
+
+**Carga y procesamiento de datos geográficos por tienda**  
+    Cada tienda tiene su propio conjunto de datos con:
+    
+    - Coordenadas (`lat`, `lon`)
+        
+    - Ingreso total (`ingreso_total`)
+        
+    - Calificación de cliente (`calificacion`)
+        
+    - Nombre de producto (`producto`)
+        
+- **Visualización con mapas interactivos usando Folium**
+    
+    - Se genera un **mapa base centrado en Perú**.
+        
+    - Cada tienda tiene un **color distinto** y un **grupo de marcadores interactivos**.
+        
+    - Los **CircleMarkers** tienen `popup` con información relevante.
+        
+- **Capa de control por tienda**  
+    Puedes activar o desactivar visualmente los puntos de cada tienda por separado con `LayerControl`.
+    
+- **Mapa de calor (HeatMap)**  
+    Se crea una capa de **HeatMap** basada en los ingresos totales (`ingreso_total`) por ubicación, lo cual:
+    
+    - Muestra dónde se concentran más las ventas.
+        
+    - Identifica áreas de alto rendimiento.
+
+***Gráfico de mapa de calor de ingresos***
+![Gráfico de mapa de calor de ingresos](images/mapa_calor_ingresos.png)
+
+***Gráfico de datos geográficos por tienda***
+![Gráfico de datos geográficos por tienda](images/vista_ubicacion_tienda_detalles.png)
 ---
 
 ## 🚀 Instrucciones para Ejecutar el Notebook
