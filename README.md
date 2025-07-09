@@ -14,6 +14,10 @@ El proyecto está organizado de la siguiente manera:
 
 ```
 Alura-Store/
+├── images/
+│   ├── ingresos_por_tienda.png
+│   ├── mapa_calor_ingresos.png
+│   └── calificacion_promedio.png
 ├── base-de-datos-challenge1-latam/
 │   ├── tienda_1 .csv
 │   ├── tienda_2.csv
@@ -23,6 +27,8 @@ Alura-Store/
 └── README.md                  
 ```
 
+- **`images/`**: Esta carpeta contiene las imágenes generadas a partir del análisis de datos, incluyendo gráficos, mapas y visualizaciones clave del proyecto.
+  
 - **`base-de-datos-challenge1-latam/`**: Esta carpeta contiene los archivos CSV originales con los datos de ventas de cada una de las cuatro tiendas de Alura Store (`tienda_1.csv` a `tienda_4.csv`). Estos datos son la fuente principal para el análisis.
     
 - **`AluraStoreLatam.ipynb`**: Este es el notebook principal (archivo de Google Colab o Jupyter) donde se realiza todo el análisis de datos. Contiene el código para cargar, limpiar, procesar y visualizar los datos, así como las conclusiones y recomendaciones.
