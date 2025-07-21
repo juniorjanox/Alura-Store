@@ -1,11 +1,10 @@
-# <p align="center"><strong>📊 Proyecto Telecom X – Análisis de Evasión de Clientes</em> 🛒</strong><br>
-<em>Este proyecto tiene como objetivo principal analizar los factores que influyen en la **evasión (churn)** de clientes de una empresa de telecomunicaciones. A través de herramientas de ciencia de datos como Python, Pandas, Matplotlib y Seaborn, se exploran patrones de comportamiento de los usuarios para proponer recomendaciones que ayuden a reducir la pérdida de clientes.</em></p>
+# <p align="center"><strong>📊 Análisis de Datos del Challenge: <em>Alura Store</em> 🛒</strong><br>
+<em>**El objetivo** es identificar la tienda menos eficiente y presentar una recomendación final basada en los datos.</em></p>
 ## 🎯 Propósito del Análisis
 
-- Identificar variables que afectan la evasión.
-- Analizar el comportamiento de los clientes actuales vs. los que han abandonado.
-- Generar insights valiosos para apoyar la toma de decisiones estratégicas.
-- Establecer las bases para un futuro modelo predictivo.
+Este proyecto tiene como objetivo principal ayudar al Sr. Juan, propietario de la cadena Alura Store, a tomar una decisión informada sobre **cuál de sus cuatro tiendas debe considerar vender** para iniciar un nuevo emprendimiento. Para lograr esto, se ha realizado un análisis exhaustivo de los datos de ventas, rendimiento y satisfacción del cliente de cada tienda.
+
+El análisis busca identificar la tienda **menos eficiente** basándose en métricas clave de facturación, volumen de ventas, satisfacción del cliente y costos operativos, proporcionando una recomendación final sustentada en los datos.
 
 ---
 
@@ -14,15 +13,18 @@
 El proyecto está organizado de la siguiente manera:
 
 ```
-TelecomX/
-├── TelecomX_Data.json # Archivo con los datos de clientes y sus características
-├── TelecomX_diccionario.md # Diccionario de datos con explicación de cada variable
-├── TelecomX_LATAM.ipynb # Notebook principal con análisis exploratorio y visualizaciones
+Alura-Store/
 ├── images/
 │   ├── ingresos_por_tienda.png
 │   ├── mapa_calor_ingresos.png
 │   └── calificacion_promedio.png
-├──  README.md                  
+├── base-de-datos-challenge1-latam/
+│   ├── tienda_1 .csv
+│   ├── tienda_2.csv
+│   ├── tienda_3.csv
+│   └── tienda_4.csv
+├── AluraStoreLatam.ipynb 
+└── README.md                  
 ```
 
 - **`images/`**: Esta carpeta contiene las imágenes generadas a partir del análisis de datos, incluyendo gráficos, mapas y visualizaciones clave del proyecto.
@@ -38,49 +40,108 @@ TelecomX/
 
 ## 📊 Ejemplos de Gráficos e Insights Obtenidos
 
+El análisis del notebook genera diversas visualizaciones y métricas clave para cada tienda. A continuación, se presentan algunos ejemplos de los tipos de gráficos y los _insights_ que se pueden extraer:
+
+### 1. Análisis de Facturación General
+
+Se compara el **Ingreso Total** y el **Número de Transacciones** de cada tienda.
+
+**Insight:** La **Tienda 4** es la que presenta los ingresos totales y el número de transacciones más bajos.
+
+***Gráfico de Ingreso Total por Tienda***
+![Gráfico de Ingreso Total por Tienda](images/ingreso_total_por_tienda.png)
+
+***Gráfico de Número de Transacciones por Tienda***
+![Gráfico de Número de Transacciones por Tienda](images/transacciones_por_tienda.png)
+
+
+### 2. Calificación Promedio de la Tienda
+
+Se evalúa la **satisfacción del cliente** a través de la calificación promedio recibida.
+
+**Insight:** La **Tienda 1** registra la calificación promedio más baja, lo que sugiere posibles problemas con la calidad del producto o el servicio al cliente, a pesar de tener un alto volumen de ventas.
+
+***Gráfico de Calificación Promedio por Tienda***
+![Gráfico de Calificación Promedio por Tienda](images/calificacion_por_tienda.png)
+
+
+### 3. Costo de Envío Promedio
+
+Se analiza la eficiencia logística comparando el costo promedio de envío por tienda.
+
+**Insight:** La **Tienda 1** tiene el costo de envío promedio más alto, lo que indica ineficiencias logísticas o un área de servicio más costosa. Sorprendentemente, la **Tienda 4**, a pesar de sus bajos ingresos, es la más eficiente en términos de costo de envío promedio.
+
+***Gráfico de Costo de Envío Promedio por Tienda***
+![Gráfico de Costo de Envío Promedio por Tienda](images/costo_envio_por_tienda.png)
+
+
+### 4. Productos Más y Menos Vendidos (por Tienda)
+
+Se identifica qué productos tienen mayor y menor demanda en cada ubicación.
+
+**Insight:** Este análisis revela si las tiendas están optimizando su inventario y si los productos ofrecidos se alinean con la demanda local. Por ejemplo, una tienda ineficiente podría tener sus productos "estrella" con bajas ventas, o una gran cantidad de stock de productos "menos vendidos".
+
+***Gráfico de Top 5 Productos Más Vendidos para Tienda 1***
+![Gráfico de Top 5 Productos Más Vendidos para Tienda X](images/top_productos.png)
+
+### 5. ¡Extra! Análisis del desempeño geográfico
+
+**Carga y procesamiento de datos geográficos por tienda**  
+    Cada tienda tiene su propio conjunto de datos con:
+    
+    - Coordenadas (`lat`, `lon`)
+        
+    - Ingreso total (`ingreso_total`)
+        
+    - Calificación de cliente (`calificacion`)
+        
+    - Nombre de producto (`producto`)
+        
+- **Visualización con mapas interactivos usando Folium**
+    
+    - Se genera un **mapa base centrado en Perú**.
+        
+    - Cada tienda tiene un **color distinto** y un **grupo de marcadores interactivos**.
+        
+    - Los **CircleMarkers** tienen `popup` con información relevante.
+        
+- **Capa de control por tienda**  
+    Puedes activar o desactivar visualmente los puntos de cada tienda por separado con `LayerControl`.
+    
+- **Mapa de calor (HeatMap)**  
+    Se crea una capa de **HeatMap** basada en los ingresos totales (`ingreso_total`) por ubicación, lo cual:
+    
+    - Muestra dónde se concentran más las ventas.
+        
+    - Identifica áreas de alto rendimiento.
+
+***Gráfico de mapa de calor de ingresos***
+![Gráfico de mapa de calor de ingresos](images/mapa_calor_ingresos.png)
+
+***Gráfico de datos geográficos por tienda***
+![Gráfico de datos geográficos por tienda](images/vista_ubicacion_tienda_detalles.png)
 
 ---
 
-## 📈 Ejemplos de Gráficos e Insights Obtenidos
+## 🚀 Instrucciones para Ejecutar el Notebook
 
-### 🔸 Distribución de Evasión (`distribucion_churn.png`)
-![Distribución de Evasión](images/distribucion_churn.png)  
-El 26.6% de los clientes abandonaron el servicio. Esta tasa de evasión es considerable y merece atención estratégica.
+Para ejecutar este análisis en tu entorno de Google Colab, sigue estos pasos:
 
----
-
-### 🔸 Correlación entre Variables (`correlacion_variables.png`)
-![Correlación](images/correlacion_variables.png)  
-Se observa una alta correlación positiva entre la evasión y factores como:
-- **Meses como cliente (tenure)**: los clientes nuevos tienden a abandonar más rápido.
-- **Ingresos mensuales bajos** también se asocian con mayor evasión.
-- Contratos mensuales tienen mayor probabilidad de evasión frente a contratos anuales.
-
----
-
-### 🔸 Ingresos Mensuales vs Churn (`ingresos_vs_churn.png`)
-![Ingresos](images/ingresos_vs_churn.png)  
-Los clientes con ingresos mensuales bajos son más propensos a cancelar el servicio.
+1. **Abre el Notebook:** Ve a Google Colab y abre el archivo `AluraStoreLatam.ipynb` (o el nombre que le hayas dado) desde tu repositorio de GitHub. Puedes ir a `File > Open notebook > GitHub` y pegar la URL de tu repositorio.
+    
+2. **Verifica las Librerías:** Asegúrate de que las librerías necesarias estén instaladas. El notebook utiliza `pandas`, `numpy`, `matplotlib`, `folium` y `seaborn`. En Google Colab, estas librerías ya vienen preinstaladas en la mayoría de los casos. Si alguna no lo está, puedes instalarla con `!pip install <nombre_libreria>`.
+    
+3. **Ejecuta las Celdas:** Ejecuta cada celda del notebook secuencialmente.
+    
+    - La primera celda cargará los datos de las URLs, y realizará la limpieza y preparación de los datos para cada tienda..
+        
+    - Las secciones posteriores generarán los análisis y gráficos correspondientes a cada punto (Facturación, Categorías, Calificación, Productos, Envío, Extra).
+        
+4. **Revisa la Salida:** Observa las tablas de resultados impresas y los gráficos generados después de ejecutar cada sección. Estos te proporcionarán los _insights_ clave para el desafío.
+    
 
 ---
 
-### 🔸 Tipo de Contrato vs Churn (`contratos_vs_churn.png`)
-![Contrato](images/contratos_vs_churn.png)  
-Los contratos de tipo "Mes a Mes" tienen la mayor tasa de cancelación, mientras que los contratos a largo plazo retienen mejor a los clientes.
+**Conclusión Final:**
 
----
-
-### 🔸 Número de Servicios Contratados (`servicios_vs_churn.png`)
-![Servicios](images/servicios_vs_churn.png)  
-Cuantos más servicios tiene un cliente, menor es su probabilidad de evasión. Ofrecer paquetes integrados puede ser una buena estrategia de retención.
-
----
-
-## 🧪 Cómo Ejecutar el Notebook
-
-1. Asegúrate de tener Python 3.8+ y Jupyter Notebook instalado.
-2. Clona este repositorio o descarga los archivos.
-3. Instala las dependencias necesarias:
-   ```bash
-   pip install pandas matplotlib seaborn
-
+Basado en el análisis de todas las métricas clave, la **Tienda 4** se identifica como la tienda menos eficiente. Presenta el menor **Ingreso Total**, el menor **Número de Transacciones**, el **Ticket Promedio** más bajo y el **Ingreso Promedio por Día** más bajo. Aunque es eficiente en costos de envío y tiene una calificación aceptable, su bajo rendimiento en la generación de ingresos y volumen de ventas la convierte en la principal candidata para la venta.
